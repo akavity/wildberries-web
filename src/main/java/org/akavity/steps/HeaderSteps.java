@@ -47,9 +47,9 @@ public class HeaderSteps {
     public boolean isTitleVDisplayed(String title) {
         Utils.sleep(2000);
         log.info("Switch to frame");
-        if(headerPage.getIframe().is(exist)) {
+        if (headerPage.getIframe().is(exist)) {
             switchTo().frame(headerPage.getIframe());
-        } //  iframe
+        }
         boolean result = headerPage.getServiceMenuTitle(title).isDisplayed();
         log.info("Is the title displayed: {}", result);
         return result;
