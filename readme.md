@@ -34,3 +34,5 @@
 * Apache Log4j 2.24.3
 * Gson 2.12.0
 * Project Lombok 1.18.36
+
+![Maven TestNG](https://github.com/akavity/wildberries-web/raw/feature-parallel-three/report.jpg)
