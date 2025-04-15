@@ -35,5 +35,6 @@
 * Gson 2.12.0
 * Project Lombok 1.18.36
 
-## Maven TestNG
+## Report:
+
 ![Maven TestNG](https://github.com/akavity/wildberries-web/raw/develop/report.jpg)
