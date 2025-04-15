@@ -37,6 +37,3 @@
 
 ## Maven TestNG
 ![Maven TestNG](https://github.com/akavity/wildberries-web/raw/develop/report.jpg)
-
-## Gradle JUnit
-![Maven TestNG](https://github.com/akavity/wildberries-web/raw/develop/report2.jpg)
