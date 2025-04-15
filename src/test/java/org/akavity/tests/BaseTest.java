@@ -49,6 +49,7 @@ public class BaseTest {
                 .enableLogs(LogType.BROWSER, Level.ALL));
         Configuration.browserSize = "1920x1080";
         Configuration.browser = CHROME;
+        Configuration.timeout = 10_000;
     }
 
     public static void startSelenoid(String browser, String version) {
@@ -59,6 +60,7 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browser = browser;
+        Configuration.timeout = 10_000;
 
         Map<String, Boolean> options = new HashMap<>();
         options.put("enableVNC", true);

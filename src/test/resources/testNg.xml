@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="MainTest" parallel="tests" thread-count="2">
+<suite name="MainTest" parallel="tests" thread-count="6">
     <test name="FirstTest">
         <parameter name="startType" value="selenoid"/>
         <parameter name="browser" value="chrome"/>
@@ -10,16 +10,6 @@
                     <include name="catalogNavigation"/>
                     <include name="selectCurrencyType"/>
                     <include name="selectPickUpPoint"/>
-                    <include name="selectProductFromLocalWarehouse"/>
-                    <include name="selectPromotion"/>
-                </methods>
-            </class>
-            <class name="org.akavity.tests.FAQTest">
-                <methods>
-                    <include name="selectFAQ"/>
-                    <include name="checkRefundAndPaymentInfo"/>
-                    <include name="searchForQuestion"/>
-                    <include name="serviceMenuNavigation"/>
                 </methods>
             </class>
         </classes>
@@ -39,6 +29,28 @@
                     <include name="sortByBenefit"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+    <test name="ThirdTest">
+        <parameter name="startType" value="selenoid"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="latest"/>
+        <classes>
+            <class name="org.akavity.tests.FAQTest">
+                <methods>
+                    <include name="selectFAQ"/>
+                    <include name="checkRefundAndPaymentInfo"/>
+                    <include name="searchForQuestion"/>
+                    <include name="serviceMenuNavigation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="FourthTest">
+        <parameter name="startType" value="selenoid"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="latest"/>
+        <classes>
             <class name="org.akavity.tests.ProductTest">
                 <methods>
                     <include name="productSearch"/>
@@ -46,6 +58,19 @@
                     <include name="viewQuestions"/>
                     <include name="openProductPopup"/>
                     <include name="addProductToBasket"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="FifthTest">
+        <parameter name="startType" value="selenoid"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="latest"/>
+        <classes>
+            <class name="org.akavity.tests.HeaderTest">
+                <methods>
+                    <include name="selectProductFromLocalWarehouse"/>
+                    <include name="selectPromotion"/>
                 </methods>
             </class>
         </classes>
