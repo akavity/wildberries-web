@@ -118,7 +118,7 @@ public class CatalogSteps {
     @Step
     public boolean checkSortByAscendingPrice(int elements) {
         Utils.sleep(1500);
-        boolean result = Utils.isSortedAscending(getProductPrices(elements));
+        boolean result = Utils.isSortedIncreasing(getProductPrices(elements));
         log.info("Are first \" {} \" products sorted correctly in ascending price order?: {}", elements, result);
         return result;
     }
