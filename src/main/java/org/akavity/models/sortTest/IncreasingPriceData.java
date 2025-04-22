@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AscendingPriceData {
+public class IncreasingPriceData {
     String mainListItem;
     String firstDropListItem;
     String secondDropListItem;

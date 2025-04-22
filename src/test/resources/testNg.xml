@@ -22,7 +22,7 @@
             <class name="org.akavity.tests.SortTest">
                 <methods>
                     <include name="sortProductsByPrice"/>
-                    <include name="sortByAscendingPrice"/>
+                    <include name="sortByIncreasingPrice"/>
                     <include name="sortByDecreasingPrice"/>
                     <include name="sortByNewness"/>
                     <include name="sortByRating"/>
