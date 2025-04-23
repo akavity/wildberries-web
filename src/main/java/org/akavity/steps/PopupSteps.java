@@ -26,7 +26,7 @@ public class PopupSteps {
 
     @Step
     public String getProductBrand() {
-        String brand = popupPage.getProductBrand().getText();
+        String brand = popupPage.getProductBrand().getText().toLowerCase();
         log.info("Popup product brand: {}", brand);
         return brand;
     }

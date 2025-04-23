@@ -34,6 +34,7 @@ public class FiltersBlockSteps {
         Utils.sleep(1000);
         filter.getRadioButton(type).shouldBe(visible);
         filter.getRadioButton(type).click();
+        filter.getTitleField().click();
     }
 
     @Step

@@ -85,7 +85,7 @@ public class CatalogSteps {
 
     @Step
     public String getFirstProductCardBrand() {
-        String brand = catalogPage.getBrandFields().first().getText();
+        String brand = catalogPage.getBrandFields().first().getText().toLowerCase();
         log.info("Brand of the first product card: {}", brand);
         return brand;
     }
