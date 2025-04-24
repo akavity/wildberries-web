@@ -21,7 +21,7 @@ public class FAQTest extends BaseTest {
         headerSteps.clickAddressButton();
         infoSteps.clickServiceMenuItem(faqData.getServiceMenuItem());
         infoSteps.clickFAQMenuItem(faqData.getFaqMenuItem());
-        infoSteps.clickDropDownTitle(faqData.getTitle());                    // without iframe
+        infoSteps.clickDropDownTitle(faqData.getTitle());
 
         Assert.assertTrue(infoSteps.isDropDownContentDisplayed(faqData.getContent()));
     }
@@ -31,7 +31,7 @@ public class FAQTest extends BaseTest {
     public void checkRefundAndPaymentInfo(RefundPaymentData refundPayment) {
         headerSteps.clickAddressButton();
         infoSteps.clickServiceMenuItem(refundPayment.getMenuItem());
-        infoSteps.clickDropDownTitle(refundPayment.getTitle());              // with iframe
+        infoSteps.clickDropDownTitle(refundPayment.getTitle());
 
         Assert.assertTrue(infoSteps.isDropDownContentDisplayed(refundPayment.getContent()));
     }

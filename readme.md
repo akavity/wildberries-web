@@ -17,7 +17,7 @@
 * Test 13. Check information about refund and payment methods.
 * Test 14. Search for a question in FAQ.
 * Test 15. Sort products by price within set limits.
-* Test 16. Sort products by ascending price.
+* Test 16. Sort products by increasing price.
 * Test 17. Sort products by decreasing price.
 * Test 18. Sort products by newness.
 * Test 19. Sort products by rating.

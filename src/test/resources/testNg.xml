@@ -22,37 +22,15 @@
             <class name="org.akavity.tests.SortTest">
                 <methods>
                     <include name="sortProductsByPrice"/>
-                    <include name="sortByAscendingPrice"/>
+                    <include name="sortByIncreasingPrice"/>
                     <include name="sortByDecreasingPrice"/>
                     <include name="sortByNewness"/>
                     <include name="sortByRating"/>
                     <include name="sortByBenefit"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="ThirdTest">
-        <parameter name="startType" value="selenoid"/>
-        <parameter name="browser" value="chrome"/>
-        <parameter name="version" value="latest"/>
-        <classes>
-            <class name="org.akavity.tests.FAQTest">
-                <methods>
                     <include name="selectFAQ"/>
                     <include name="checkRefundAndPaymentInfo"/>
                     <include name="searchForQuestion"/>
                     <include name="serviceMenuNavigation"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="FourthTest">
-        <parameter name="startType" value="selenoid"/>
-        <parameter name="browser" value="chrome"/>
-        <parameter name="version" value="latest"/>
-        <classes>
-            <class name="org.akavity.tests.ProductTest">
-                <methods>
                     <include name="productSearch"/>
                     <include name="viewReviews"/>
                     <include name="viewQuestions"/>
@@ -62,7 +40,7 @@
             </class>
         </classes>
     </test>
-    <test name="FifthTest">
+    <test name="ThirdTest">
         <parameter name="startType" value="selenoid"/>
         <parameter name="browser" value="chrome"/>
         <parameter name="version" value="latest"/>

@@ -16,7 +16,7 @@ public class InfoPage {
         return $(By.xpath("//h2[contains(@class,'dropdown-t') and contains(text(),'" + title + "')]/.."));
     }
 
-    public SelenideElement getDropDownContent(String cont) {  // String title, String cont
+    public SelenideElement getDropDownContent(String cont) {
         return $(By.xpath("//h1[@class='faq-title c-h1']/..//p[contains(text(),'" + cont + "')] " +
                 " | //h2[contains(@class,'dropdown-title')]/..//p[contains(text(),'" + cont + "')]"));
 

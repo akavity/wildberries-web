@@ -85,7 +85,7 @@ public class CatalogSteps {
 
     @Step
     public String getFirstProductCardBrand() {
-        String brand = catalogPage.getBrandFields().first().getText();
+        String brand = catalogPage.getBrandFields().first().getText().toLowerCase();
         log.info("Brand of the first product card: {}", brand);
         return brand;
     }
@@ -118,7 +118,7 @@ public class CatalogSteps {
     @Step
     public boolean checkSortByAscendingPrice(int elements) {
         Utils.sleep(1500);
-        boolean result = Utils.isSortedAscending(getProductPrices(elements));
+        boolean result = Utils.isSortedIncreasing(getProductPrices(elements));
         log.info("Are first \" {} \" products sorted correctly in ascending price order?: {}", elements, result);
         return result;
     }

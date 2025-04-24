@@ -46,7 +46,7 @@ public class Utils {
         return result;
     }
 
-    public static boolean isSortedAscending(List<Double> list) {
+    public static boolean isSortedIncreasing(List<Double> list) {
         boolean result = true;
         for (int i = 0; i < list.size() - 1; i++) {
             if (list.get(i) > list.get(i + 1)) {

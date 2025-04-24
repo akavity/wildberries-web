@@ -28,9 +28,9 @@ public class SortTest extends BaseTest {
         Assert.assertTrue(catalogSteps.areProductPricesWithinLimit(price.getMinPrice(), price.getMaxPrice()));
     }
 
-    @TestData(jsonFile = "ascendingPriceData", model = "AscendingPriceData", folder = "sortTest")
-    @Test(description = "Sort products by ascending price", dataProviderClass = JsonReader.class, dataProvider = "getData")
-    public void sortByAscendingPrice(AscendingPriceData ascendingPrice) {
+    @TestData(jsonFile = "increasingPriceData", model = "IncreasingPriceData", folder = "sortTest")
+    @Test(description = "Sort products by increasing price", dataProviderClass = JsonReader.class, dataProvider = "getData")
+    public void sortByIncreasingPrice(IncreasingPriceData ascendingPrice) {
         headerSteps.clickCatalogButton();
         navigationSteps.clickMainListItem(ascendingPrice.getMainListItem());
         navigationSteps.clickDropListItem(ascendingPrice.getMainListItem(), ascendingPrice.getFirstDropListItem(), ascendingPrice.getSecondDropListItem());

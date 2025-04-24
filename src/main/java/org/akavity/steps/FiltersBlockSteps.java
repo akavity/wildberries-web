@@ -5,6 +5,11 @@ import lombok.extern.log4j.Log4j2;
 import org.akavity.pages.FiltersBlockPage;
 import org.akavity.utils.Utils;
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.clickable;
+import static com.codeborne.selenide.Condition.visible;
+
 @Log4j2
 public class FiltersBlockSteps {
     FiltersBlockPage filter = new FiltersBlockPage();
@@ -18,13 +23,16 @@ public class FiltersBlockSteps {
     @Step
     public void clickSorterButton() {
         log.info("Click sorter button");
-        Utils.sleep(1200);
+        filter.getSalesButton().shouldBe(visible, Duration.ofSeconds(5));
+        filter.getSorterButton().shouldBe(clickable, Duration.ofSeconds(5));
         filter.getSorterButton().click();
     }
 
     @Step
     public void selectSortType(String type) {
         log.info("Select sort type: {}", type);
+        Utils.sleep(1000);
+        filter.getRadioButton(type).shouldBe(visible);
         filter.getRadioButton(type).click();
         filter.getTitleField().click();
     }

@@ -7,10 +7,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class FiltersBlockPage {
     private final SelenideElement titleField = $(By.cssSelector("[class='catalog-title']"));
+    private final SelenideElement salesButton = $(By.xpath("//span[text()='РАСПРОЖАРА']/.."));
     private final SelenideElement minPrice = $(By.cssSelector("div[class*='filter__price'] input[name*='start']"));
     private final SelenideElement maxPrice = $(By.cssSelector("div[class*='filter__price'] input[name*='end']"));
     private final SelenideElement priceReadyButton = $(By.xpath("//button[contains(@class,'filter-btn') and contains(.,'Готово')]"));
-    private final SelenideElement sorterButton = $(By.cssSelector("button[class*='sorter']"));
+    private final SelenideElement sorterButton = $(By.xpath("//button[contains(@class,'sorter')]/.."));
     private final SelenideElement allFiltersButton = $(By.cssSelector("button[class*='filter__btn--all']"));
 
     public SelenideElement getButton(String name) {
@@ -18,7 +19,7 @@ public class FiltersBlockPage {
     }
 
     public SelenideElement getRadioButton(String name) {
-        return $(By.xpath("//span[contains(@class,'radio-with-text') and contains(.,'" + name + "')]"));
+        return $(By.xpath("//span[contains(@class,'radio-with-text') and contains(.,'" + name + "')]/../.."));
     }
 
     public SelenideElement getCheckBox(String name) {
@@ -27,6 +28,10 @@ public class FiltersBlockPage {
 
     public SelenideElement getTitleField() {
         return titleField;
+    }
+
+    public SelenideElement getSalesButton() {
+        return salesButton;
     }
 
     public SelenideElement getMinPrice() {

@@ -75,7 +75,7 @@ public class HeaderSteps {
         Utils.sleep(2000);
         log.info("Check address of pick up point");
         boolean res = headerPage.getGeolocationButtonByText(address).isDisplayed();
-        if (res == true) {
+        if (res) {
             log.info("Address {} is displayed", address);
         } else {
             log.info("Address {} isn't displayed", address);
