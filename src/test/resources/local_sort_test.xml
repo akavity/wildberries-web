@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite Local test">
+
+    <test name="First Test">
+        <parameter name="startType" value="local"/>
+        <classes>
+            <class name="org.akavity.tests.SortTest">
+                <methods>
+                    <include name="sortProductsByPrice"/>
+                    <include name="sortByIncreasingPrice"/>
+                    <include name="sortByDecreasingPrice"/>
+                    <include name="sortByNewness"/>
+                    <include name="sortByRating"/>
+                    <include name="sortByBenefit"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
