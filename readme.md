@@ -48,7 +48,7 @@ to run sort tests in a local Chrome browser:
 mvn clean test -Dsuite=src/test/resources/local_sort_test.xml
 ```
 
-to run all tests in a Docker Selenoid browser:
+to run tests in a Docker Selenoid browser:
 
 ```
 mvn clean test -Dsuite=src/test/resources/docker_test.xml
