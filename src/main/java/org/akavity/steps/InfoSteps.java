@@ -17,7 +17,7 @@ public class InfoSteps {
     @Step
     public void clickServiceMenuItem(String item) {
         log.info("Click service menu item: {}", item);
-        infoPage.getServiceMenuItem(item).shouldBe(clickable, Duration.ofSeconds(4)).click();
+        infoPage.getServiceMenuItem(item).shouldBe(clickable, Duration.ofSeconds(10)).click();
     }
 
     @Step
