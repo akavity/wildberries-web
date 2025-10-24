@@ -23,7 +23,7 @@ public class SortTest extends BaseTest {
         navigationSteps.clickMainListItem(price.getMainListItem());
         navigationSteps.clickDropListItem(price.getMainListItem(), price.getFirstDropListItem(), price.getSecondDropListItem());
         filtersBlockSteps.clickFilterButton(price.getButton());
-        filtersBlockSteps.enterMinMaxAmount(price.getMinPrice(), price.getMaxPrice());
+        filtersBlockSteps.enterMinMaxPrice(price.getMinPrice(), price.getMaxPrice());
 
         Assert.assertTrue(catalogSteps.areProductPricesWithinLimit(price.getMinPrice(), price.getMaxPrice()));
     }

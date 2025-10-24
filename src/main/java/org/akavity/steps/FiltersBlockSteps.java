@@ -17,7 +17,7 @@ public class FiltersBlockSteps {
     @Step
     public void clickFilterButton(String button) {
         log.info("Click dropdown-filter button: {}", button);
-        filter.getButton(button).hover().click();
+        filter.getButton(button).click();
     }
 
     @Step
@@ -56,10 +56,10 @@ public class FiltersBlockSteps {
     }
 
     @Step
-    public void enterMinMaxAmount(String min, String max) {
+    public void enterMinMaxPrice(String min, String max) {
         log.info("Enter min {} and max {} amount", min, max);
-        filter.getMinPrice().setValue(min);
-        filter.getMaxPrice().setValue(max);
+        Utils.cleanFieldAndSetPrice(filter.getMinPrice(), min);
+        Utils.cleanFieldAndSetPrice(filter.getMaxPrice(), max);
         log.info("Click submit button");
         filter.getPriceReadyButton().click();
     }
