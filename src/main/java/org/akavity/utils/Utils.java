@@ -1,7 +1,9 @@
 package org.akavity.utils;
 
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
 import lombok.extern.log4j.Log4j2;
+import org.openqa.selenium.Keys;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -66,5 +68,11 @@ public class Utils {
             }
         }
         return result;
+    }
+
+    public static void cleanFieldAndSetPrice(SelenideElement field, String price) {
+        log.info("Clean field and set price: {}", price);
+        String b = Keys.BACK_SPACE.toString();
+        field.sendKeys(b + b + b + b + b + b + b + b + b + b + price);
     }
 }
