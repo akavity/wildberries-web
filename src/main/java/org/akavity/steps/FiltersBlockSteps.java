@@ -38,15 +38,15 @@ public class FiltersBlockSteps {
     }
 
     @Step
-    public void enterMinAmount(String min) {
-        log.info("Enter min amount: {}", min);
-        filter.getMinPrice().setValue(min);
+    public void enterMinPrice(String min) {
+        log.info("Enter min price: {}", min);
+        Utils.cleanFieldAndSetPrice(filter.getMinPrice(), min);
     }
 
     @Step
-    public void enterMaxAmount(String max) {
-        log.info("Enter max amount: {}", max);
-        filter.getMaxPrice().setValue(max);
+    public void enterMaxPrice(String max) {
+        log.info("Enter max price: {}", max);
+        Utils.cleanFieldAndSetPrice(filter.getMaxPrice(), max);
     }
 
     @Step
@@ -57,7 +57,7 @@ public class FiltersBlockSteps {
 
     @Step
     public void enterMinMaxPrice(String min, String max) {
-        log.info("Enter min {} and max {} amount", min, max);
+        log.info("Enter min {} and max {} price", min, max);
         Utils.cleanFieldAndSetPrice(filter.getMinPrice(), min);
         Utils.cleanFieldAndSetPrice(filter.getMaxPrice(), max);
         log.info("Click submit button");
