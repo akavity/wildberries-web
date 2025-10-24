@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class FiltersBlockPage {
     private final SelenideElement titleField = $(By.cssSelector("[class='catalog-title']"));
-    private final SelenideElement salesButton = $(By.xpath("//span[text()='РАСПРОЖАРА']/.."));
+    private final SelenideElement salesButton = $(By.xpath("//span[text()='РАСПРОДАЖА']/.."));
     private final SelenideElement minPrice = $(By.xpath("//div[@data-testid='catalog-filter']//div[contains(@class,'filter__price')]//input[contains(@name,'start')]/.."));
     private final SelenideElement maxPrice = $(By.cssSelector("div[data-testid='catalog-filter'] div[class*='filter__price'] input[name*='end']"));
     private final SelenideElement priceReadyButton = $(By.xpath("//div[@data-testid='catalog-filter']//button[contains(.,'Готово')]"));

@@ -17,7 +17,7 @@ public class CatalogPage {
     private final ElementsCollection productNames = $$(By.cssSelector("span[class='product-card__name']"));
     private final ElementsCollection brandFields = $$(By.cssSelector("span[class='product-card__brand']"));
     private final ElementsCollection productCounts = $$(By.cssSelector("p[class*='rating'] span[class*='card__count']"));
-    private final ElementsCollection productRatings = $$(By.cssSelector("p[class*='rating'] span[class*='rate-mini']"));
+    private final ElementsCollection productRatings = $$(By.cssSelector("div[class*='product-card'] span[class*='rate-mini']"));
     private final ElementsCollection addBasketButtons = $$(By.cssSelector("p[class='product-card__order-wrap']"));
     private final SelenideElement popupBlock = $(By.cssSelector("div[class*='popup-list']")); // check
     private final ElementsCollection sizeListButtons = $$(By.cssSelector("div[class*='slideUp'] li[class='sizes-list__item']")); // check
