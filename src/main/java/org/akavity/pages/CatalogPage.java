@@ -22,8 +22,8 @@ public class CatalogPage {
     private final SelenideElement popupBlock = $(By.cssSelector("div[class*='popup-list']")); // check
     private final ElementsCollection sizeListButtons = $$(By.cssSelector("div[class*='slideUp'] li[class='sizes-list__item']")); // check
 
-    public SelenideElement getSearchTitleField(String title) {
-        return $(By.xpath("//h1[@class='searching-results__title' and contains(text(),'" + title + "')]"));
+    public SelenideElement getSearchTitleField() {
+        return $(By.xpath("//h1[@class='searching-results__title' and contains(text(),'')]"));
     }
 
     public SelenideElement getTileField() {

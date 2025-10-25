@@ -35,9 +35,9 @@ public class CatalogSteps {
 
     @Step
     public boolean doProductNamesContainText(String text) {
-        catalogPage.getSearchTitleField(text).shouldBe(visible);
+        catalogPage.getSearchTitleField().shouldBe(visible);
         log.info("Do product names contain text: {}", text);
-        List<String> names = new ArrayList<>(catalogPage.getProductNames().texts());
+        List<String> names = new ArrayList<>(catalogPage.getProductNames().first(10).texts());
         boolean result;
         log.info("List size: {}", names.size());
         if (names.isEmpty()) {

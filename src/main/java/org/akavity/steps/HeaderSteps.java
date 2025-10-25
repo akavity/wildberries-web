@@ -22,7 +22,7 @@ public class HeaderSteps {
     @Step
     public void enterTextInSearchField(String text) {
         log.info("Enter text in the search field");
-        headerPage.getSearchField().sendKeys(text);
+        headerPage.getSearchField().setValue(text);
     }
 
     @Step
