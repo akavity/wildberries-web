@@ -48,6 +48,19 @@ public class Utils {
         return result;
     }
 
+    public static int extractIntegerFromText(String text) {
+        int result = 0;
+        Pattern pattern = Pattern.compile("^\\d{1,3}(?: \\d{3})*$");
+        Matcher matcher = pattern.matcher(text);
+        while (matcher.find()) {
+            result = Integer.parseInt(matcher.group()
+                    .replace(" ", "")
+                    .replace(" ", "")
+                    .replace(",", "."));
+        }
+        return result;
+    }
+
     public static boolean isSortedIncreasing(List<Double> list) {
         boolean result = true;
         for (int i = 0; i < list.size() - 1; i++) {
