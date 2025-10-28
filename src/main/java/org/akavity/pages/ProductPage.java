@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ProductPage {
     private final SelenideElement commentsButton = $(By.cssSelector("button[id='a-Comments']"));
-    private final SelenideElement questionsButton = $(By.cssSelector("li[data-content*='Questions'] button[id*='a-Questions']"));
+    private final SelenideElement questionsButton = $(By.xpath("//button[contains(text(),'Вопросы')]/.."));
     private final SelenideElement viewAllCommentsButton = $(By.cssSelector("div[class*='comments'] a[class*='comments__btn-all']"));
     private final SelenideElement viewAllQuestionsButton = $(By.cssSelector("div[class*='questions'] a[class*='comments__btn-all']"));
     private final SelenideElement aboutProductField = $(By.cssSelector("h2[class*='richPreviewHeader']"));

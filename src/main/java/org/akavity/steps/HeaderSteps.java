@@ -22,6 +22,7 @@ public class HeaderSteps {
     @Step
     public void enterTextInSearchField(String text) {
         log.info("Enter text in the search field");
+        Utils.sleep(1000);
         headerPage.getSearchField().setValue(text);
     }
 

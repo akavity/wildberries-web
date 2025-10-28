@@ -11,7 +11,7 @@ public class UserActivitySteps {
 
     @Step
     public boolean isFeedbackButtonDisplayed() {
-        Utils.sleep(1500);
+        Utils.sleep(2000);
         boolean result = userActivityPage.getFeedbackButton().isDisplayed();
         log.info("Is a feedback button displayed: {}", result);
         return result;
