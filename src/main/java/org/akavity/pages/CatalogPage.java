@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class CatalogPage {
     private final SelenideElement tileField = $(By.cssSelector("h1[class='catalog-title']"));
-    private final ElementsCollection productCards = $$(By.cssSelector("div[class='product-card__wrapper']"));
+    private final ElementsCollection productCards = $$(By.cssSelector("div[class*='product-card__wrapper']"));
     private final ElementsCollection newTips = $$(By.cssSelector("span[class*='product-card__tip--new']"));
     private final ElementsCollection popupButtons = $$(By.cssSelector("button[class*='open-product-popup']"));
     private final ElementsCollection saleTips = $$(By.cssSelector("p[class*='tip--sale']"));

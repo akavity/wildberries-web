@@ -7,9 +7,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ProductPage {
     private final SelenideElement commentsButton = $(By.cssSelector("button[id='a-Comments']"));
-    private final SelenideElement questionsButton = $(By.cssSelector("button[id='a-Questions']"));
-    private final SelenideElement viewAllCommentsButton = $(By.cssSelector("div[id='Comments']  a[class*='btn-base comments__btn-all']"));
-    private final SelenideElement viewAllQuestionsButton = $(By.cssSelector("div[id='Questions'] a[class*='question-all']"));
+    private final SelenideElement questionsButton = $(By.cssSelector("li[data-content*='Questions'] button[id*='a-Questions']"));
+    private final SelenideElement viewAllCommentsButton = $(By.cssSelector("div[class*='comments'] a[class*='comments__btn-all']"));
+    private final SelenideElement viewAllQuestionsButton = $(By.cssSelector("div[class*='questions'] a[class*='comments__btn-all']"));
+    private final SelenideElement aboutProductField = $(By.cssSelector("h2[class*='richPreviewHeader']"));
+    private final SelenideElement questionsCounter = $(By.cssSelector("li[data-content*='Questions'] span[class='user-activity__count']"));
 
     public SelenideElement getCommentsButton() {
         return commentsButton;
@@ -25,5 +27,13 @@ public class ProductPage {
 
     public SelenideElement getViewAllQuestionsButton() {
         return viewAllQuestionsButton;
+    }
+
+    public SelenideElement getAboutProductField() {
+        return aboutProductField;
+    }
+
+    public SelenideElement getQuestionsCounter() {
+        return questionsCounter;
     }
 }
